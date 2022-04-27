@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		13788297281992A900B49443 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13788296281992A900B49443 /* AppDelegate.swift */; };
 		13788299281992A900B49443 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13788298281992A900B49443 /* SceneDelegate.swift */; };
-		1378829B281992A900B49443 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1378829A281992A900B49443 /* ViewController.swift */; };
 		1378829E281992A900B49443 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1378829C281992A900B49443 /* Main.storyboard */; };
 		137882A0281992AA00B49443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1378829F281992AA00B49443 /* Assets.xcassets */; };
 		137882A3281992AA00B49443 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 137882A1281992AA00B49443 /* LaunchScreen.storyboard */; };
 		137882AE281992AB00B49443 /* FoodstagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137882AD281992AB00B49443 /* FoodstagramTests.swift */; };
 		137882B8281992AB00B49443 /* FoodstagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137882B7281992AB00B49443 /* FoodstagramUITests.swift */; };
 		137882BA281992AB00B49443 /* FoodstagramUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137882B9281992AB00B49443 /* FoodstagramUITestsLaunchTests.swift */; };
+		139A148928199BDC004375E7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139A148828199BDC004375E7 /* LoginViewController.swift */; };
+		139A148B28199BF5004375E7 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139A148A28199BF5004375E7 /* FeedViewController.swift */; };
 		C225C218CC60AF864831E204 /* Pods_Foodstagram_FoodstagramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 782BA0B0D9D5BFD14353FCB7 /* Pods_Foodstagram_FoodstagramUITests.framework */; };
 		CA5B176A7E67FA557F23F442 /* Pods_FoodstagramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64E6D7E875E1EF3226083041 /* Pods_FoodstagramTests.framework */; };
 		DA0BC51B7B15CFB32DDB4F90 /* Pods_Foodstagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 142A0B53EF39F5C2ED146A30 /* Pods_Foodstagram.framework */; };
@@ -42,7 +43,6 @@
 		13788293281992A900B49443 /* Foodstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13788296281992A900B49443 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13788298281992A900B49443 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1378829A281992A900B49443 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1378829D281992A900B49443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1378829F281992AA00B49443 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		137882A2281992AA00B49443 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +52,8 @@
 		137882B3281992AB00B49443 /* FoodstagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodstagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		137882B7281992AB00B49443 /* FoodstagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodstagramUITests.swift; sourceTree = "<group>"; };
 		137882B9281992AB00B49443 /* FoodstagramUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodstagramUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		139A148828199BDC004375E7 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		139A148A28199BF5004375E7 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		142A0B53EF39F5C2ED146A30 /* Pods_Foodstagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foodstagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C8196DB19BDA0592887A8B6 /* Pods-Foodstagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodstagram.debug.xcconfig"; path = "Target Support Files/Pods-Foodstagram/Pods-Foodstagram.debug.xcconfig"; sourceTree = "<group>"; };
 		41D7724C309695777A66EAF0 /* Pods-Foodstagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodstagram.release.xcconfig"; path = "Target Support Files/Pods-Foodstagram/Pods-Foodstagram.release.xcconfig"; sourceTree = "<group>"; };
@@ -118,8 +120,9 @@
 			children = (
 				13788296281992A900B49443 /* AppDelegate.swift */,
 				13788298281992A900B49443 /* SceneDelegate.swift */,
-				1378829A281992A900B49443 /* ViewController.swift */,
 				1378829C281992A900B49443 /* Main.storyboard */,
+				139A148A28199BF5004375E7 /* FeedViewController.swift */,
+				139A148828199BDC004375E7 /* LoginViewController.swift */,
 				1378829F281992AA00B49443 /* Assets.xcassets */,
 				137882A1281992AA00B49443 /* LaunchScreen.storyboard */,
 				137882A4281992AA00B49443 /* Info.plist */,
@@ -164,7 +167,6 @@
 				D5608FC208A5A215D60B8418 /* Pods-FoodstagramTests.debug.xcconfig */,
 				E90DEDDFF61D858DB42D6FF8 /* Pods-FoodstagramTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -407,8 +409,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1378829B281992A900B49443 /* ViewController.swift in Sources */,
+				139A148928199BDC004375E7 /* LoginViewController.swift in Sources */,
 				13788297281992A900B49443 /* AppDelegate.swift in Sources */,
+				139A148B28199BF5004375E7 /* FeedViewController.swift in Sources */,
 				13788299281992A900B49443 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

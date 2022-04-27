@@ -127,11 +127,105 @@
                         <viewLayoutGuide key="safeArea" id="pjh-Sf-4wK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="t04-Q2-JY2"/>
+                    <navigationItem key="navigationItem" id="t04-Q2-JY2">
+                        <barButtonItem key="rightBarButtonItem" title="Post" id="NjN-P8-2tN">
+                            <connections>
+                                <segue destination="kvy-4E-28U" kind="presentation" id="yJs-CJ-6LW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VtV-tE-Le8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="85.714285714285708"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="hZm-TA-M4E">
+            <objects>
+                <viewController id="kvy-4E-28U" customClass="CameraViewController" customModule="Foodstagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pmw-sI-aMJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.on.rectangle.angled" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Xgw-Pb-RU3">
+                                <rect key="frame" x="20" y="61" width="374" height="317"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="317" id="APt-KZ-acc"/>
+                                    <constraint firstAttribute="width" constant="374" id="VyB-kn-mIt"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hVl-di-ynO" appends="YES" id="fzN-0m-3wE"/>
+                                    <outletCollection property="gestureRecognizers" destination="hVl-di-ynO" appends="YES" id="Wso-k5-s9z"/>
+                                    <outletCollection property="gestureRecognizers" destination="hVl-di-ynO" appends="YES" id="kBq-Hf-Azn"/>
+                                    <outletCollection property="gestureRecognizers" destination="vFQ-vO-IQq" appends="YES" id="nhX-W5-6Tu"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Enter Caption" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4eH-Je-G8x">
+                                <rect key="frame" x="20" y="460.5" width="374" height="50"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" allowsDirectInteraction="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Qo7-oi-6l2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nu8-0A-DzL">
+                                <rect key="frame" x="20" y="535.5" width="374" height="37.5"/>
+                                <color key="tintColor" systemColor="systemMintColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit &amp; Post">
+                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onSubmitButton:" destination="kvy-4E-28U" eventType="touchUpInside" id="Ghy-hD-pKC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Photo and Add Recipe/Restaurant Location Along With Any Other Comments You Wish To Add" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t49-So-XsP">
+                                <rect key="frame" x="20" y="398.5" width="374" height="32"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="U1D-X5-aFX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4eH-Je-G8x" firstAttribute="leading" secondItem="U1D-X5-aFX" secondAttribute="leading" constant="20" id="0cB-gC-FIT"/>
+                            <constraint firstItem="4eH-Je-G8x" firstAttribute="top" secondItem="t49-So-XsP" secondAttribute="bottom" constant="30" id="337-Vk-Wr2"/>
+                            <constraint firstItem="Xgw-Pb-RU3" firstAttribute="leading" secondItem="U1D-X5-aFX" secondAttribute="leading" constant="20" id="4Ba-Xp-gJY"/>
+                            <constraint firstItem="nu8-0A-DzL" firstAttribute="leading" secondItem="U1D-X5-aFX" secondAttribute="leading" constant="20" id="HhZ-nq-Sgg"/>
+                            <constraint firstItem="nu8-0A-DzL" firstAttribute="top" secondItem="4eH-Je-G8x" secondAttribute="bottom" constant="25" id="Lt0-h8-LVM"/>
+                            <constraint firstItem="U1D-X5-aFX" firstAttribute="trailing" secondItem="nu8-0A-DzL" secondAttribute="trailing" constant="20" id="Rx4-9G-qll"/>
+                            <constraint firstItem="t49-So-XsP" firstAttribute="leading" secondItem="U1D-X5-aFX" secondAttribute="leading" constant="20" id="TVE-l1-hZR"/>
+                            <constraint firstItem="Xgw-Pb-RU3" firstAttribute="top" secondItem="U1D-X5-aFX" secondAttribute="top" constant="17.5" id="Yea-9u-l5V"/>
+                            <constraint firstItem="U1D-X5-aFX" firstAttribute="trailing" secondItem="4eH-Je-G8x" secondAttribute="trailing" constant="20" id="aYK-wz-669"/>
+                            <constraint firstItem="U1D-X5-aFX" firstAttribute="trailing" secondItem="t49-So-XsP" secondAttribute="trailing" constant="20" id="d9R-BE-8o5"/>
+                            <constraint firstItem="Xgw-Pb-RU3" firstAttribute="top" secondItem="U1D-X5-aFX" secondAttribute="top" constant="17.5" id="ohJ-3h-aZM"/>
+                            <constraint firstItem="U1D-X5-aFX" firstAttribute="trailing" secondItem="Xgw-Pb-RU3" secondAttribute="trailing" constant="20" id="pGB-E8-2Jq"/>
+                            <constraint firstItem="t49-So-XsP" firstAttribute="top" secondItem="Xgw-Pb-RU3" secondAttribute="bottom" constant="20" id="v4H-2C-CtN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="commentField" destination="4eH-Je-G8x" id="nCM-6T-ffv"/>
+                        <outlet property="imageView" destination="Xgw-Pb-RU3" id="5KU-wr-nF1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hon-Dq-F3H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hVl-di-ynO">
+                    <connections>
+                        <action selector="onCameraButton:" destination="kvy-4E-28U" id="35r-nt-vqc"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="vFQ-vO-IQq">
+                    <connections>
+                        <action selector="onCameraButton:" destination="kvy-4E-28U" id="zRW-fe-2Xn"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2873.913043478261" y="85.714285714285708"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MPr-YL-Oum">
@@ -153,6 +247,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="photo.on.rectangle.angled" catalog="system" width="128" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

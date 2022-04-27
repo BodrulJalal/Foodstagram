@@ -7,3 +7,5 @@ Things Left to do:
 [ ] Make a home page that will include user implemeneted feed along with yelp posts
 [ ] Create a settings tab to allow user to logout
 [ ] Create a post button at the bottom to allow a post to be added from personal account
+[ ] Fix the text field issue of only one line
+[ ] Add the feature to post the picture/comments on to the server

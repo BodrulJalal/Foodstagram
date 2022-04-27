@@ -1,8 +1,8 @@
 # Foodstagram
 Things Left to do:
 
-[ ] Make the login page
-[ ] Set up login/signup account utilizing parse
+[X] Make the login page
+[X] Set up login/signup account utilizing parse
 [ ] Set up stay logged in (utilizing the twitter tutorial)
 [ ] Make a home page that will include user implemeneted feed along with yelp posts
 [ ] Create a settings tab to allow user to logout

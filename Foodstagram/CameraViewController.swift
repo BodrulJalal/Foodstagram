@@ -7,11 +7,12 @@
 
 import UIKit
 import AlamofireImage
+import Parse
 
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
-    
+    @IBOutlet weak var dishField: UITextField!
     @IBOutlet weak var commentField: UITextView!
     
     override func viewDidLoad() {
@@ -21,7 +22,25 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate,UI
     }
     
     @IBAction func onSubmitButton(_ sender: Any) {
+        let post = PFObject(className: "Posts")
         
+        post["Dish_Name"] = dishField.text!
+        post["User"] = PFUser.current()!
+        post["Recipe_and_Comments"] = commentField.text!
+        
+        let imageData = imageView.image!.pngData()
+        let file = PFFileObject(name: "image.png", data: imageData!)
+        
+        post["Photo"] = file
+        
+        post.saveInBackground{ (success, error) in
+            if success {
+                self.dismiss(animated: true, completion: nil)
+                print("saved!")
+            } else {
+                print("error!")
+            }
+        }
         
     }
     
